@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c \"\nfrom PIL import Image\n\n# Verify the change\nimg = Image.open(''public/images/wedding-invitation/inside-of-wedding-invitation.png'')\n\n# Check the top area now has the correct color\nsample_points = [(100, 50), (500, 100), (1000, 150), (1500, 200)]\nall_correct = True\n\nprint(''Verifying gray color consistency:'')\nfor x, y in sample_points:\n    if y < 260:\n        pixel = img.getpixel((x, y))\n        if pixel == (253, 253, 253):\n            print(f''  ✓ ({x}, {y}): RGB{pixel} - Correct!'')\n        else:\n            print(f''  ✗ ({x}, {y}): RGB{pixel} - Should be (253, 253, 253)'')\n            all_correct = False\n\nif all_correct:\n    print(''\\n✓ All gray areas now use consistent color (253, 253, 253)'')\n    print(''✓ The top area seamlessly blends with the original background'')\n\")"
+      "Bash(python3 -c \"\nfrom PIL import Image\n\n# Verify the change\nimg = Image.open(''public/images/wedding-invitation/inside-of-wedding-invitation.png'')\n\n# Check the top area now has the correct color\nsample_points = [(100, 50), (500, 100), (1000, 150), (1500, 200)]\nall_correct = True\n\nprint(''Verifying gray color consistency:'')\nfor x, y in sample_points:\n    if y < 260:\n        pixel = img.getpixel((x, y))\n        if pixel == (253, 253, 253):\n            print(f''  ✓ ({x}, {y}): RGB{pixel} - Correct!'')\n        else:\n            print(f''  ✗ ({x}, {y}): RGB{pixel} - Should be (253, 253, 253)'')\n            all_correct = False\n\nif all_correct:\n    print(''\\n✓ All gray areas now use consistent color (253, 253, 253)'')\n    print(''✓ The top area seamlessly blends with the original background'')\n\")",
+      "Bash(npm run dev)",
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill -9)",
+      "Bash(lsof -ti:3001)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []

@@ -20,7 +20,7 @@ export default function ImageGallery({
   // Showcase layout - larger images, more elegant presentation
   if (layout === "showcase") {
     return (
-      <div className="w-full max-w-6xl mx-auto px-4">
+      <div className="w-full max-w-5xl mx-auto px-4">
         {title && (
           <motion.div
             className="text-center mb-8 sm:mb-12"
@@ -51,11 +51,11 @@ export default function ImageGallery({
           </motion.p>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-2xl mx-auto w-full max-w-lg"
+              className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-2xl mx-auto w-full max-w-md"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ export default function ImageGallery({
                 src={image}
                 alt={`${title || 'Ảnh cưới'} ${index + 1}`}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
                 quality={90}
@@ -81,7 +81,7 @@ export default function ImageGallery({
 
   // Grid layout - compact display
   return (
-    <div className="w-full max-w-4xl mx-auto px-4">
+    <div className="w-full max-w-5xl mx-auto px-4">
       {title && (
         <motion.div
           className="text-center mb-8 sm:mb-12"
@@ -116,7 +116,7 @@ export default function ImageGallery({
         {images.map((image, index) => (
           <motion.div
             key={index}
-            className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl mx-auto w-full max-w-sm"
+            className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-xl mx-auto w-full max-w-md"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}

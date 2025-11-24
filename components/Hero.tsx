@@ -28,35 +28,28 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl elegant-text text-white mb-6 font-bold leading-tight">
-            Chúng Mình Sắp Cưới
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl elegant-text text-white mb-6 sm:mb-8 font-bold leading-tight">
+            Lễ Thành Hôn
           </h1>
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-wedding-secondary font-light mb-12 sm:mb-16">
+            Duy Linh & Thục Hiền
+          </p>
         </motion.div>
 
         <motion.div
-          className="w-20 sm:w-24 h-1 bg-wedding-primary mx-auto mb-6"
+          className="w-24 sm:w-32 h-1 bg-wedding-primary mx-auto mb-12 sm:mb-16"
           initial={{ width: 0 }}
-          animate={{ width: 96 }}
+          animate={{ width: 128 }}
           transition={{ duration: 1, delay: 0.8 }}
         ></motion.div>
 
-        <motion.p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-8 font-light leading-relaxed px-4"
+        <motion.div
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-wedding-secondary"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
         >
-          Hân hạnh được chia sẻ niềm hạnh phúc cùng quý vị
-        </motion.p>
-
-        <motion.div
-          className="text-lg sm:text-xl md:text-2xl text-wedding-secondary"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.6 }}
-        >
-          <p className="mb-2">Ghi Nhớ Ngày Vui</p>
-          <p className="text-2xl sm:text-3xl md:text-4xl elegant-text font-semibold text-wedding-primary">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl elegant-text font-semibold text-wedding-primary">
             29.11.2025
           </p>
         </motion.div>

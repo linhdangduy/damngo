@@ -5,29 +5,29 @@ import VenueSection from "@/components/VenueSection";
 import GiftSection from "@/components/GiftSection";
 
 export default function Home() {
-  // Curated photo collection - 10 best moments
+  // Curated photo collection - Love story journey
   const ourJourneyPhotos = [
-    "/images/QLN_4745.JPG",
-    "/images/AMV_1790.JPG",
+    "/images/QLN_4794.JPG",
+    "/images/AMV_0061.JPG",
   ];
 
   const couplePhotos = [
-    "/images/AMV_0710.JPG",
-    "/images/AMV_0826.JPG",
+    "/images/AMV_2640.JPG",
+    "/images/AMV_1222.JPG",
   ];
 
   const loveStoryPhotos = [
     "/images/AMV_2064.jpg",
-    "/images/AMV_0701.JPG",
+    "/images/AMV_1790.JPG",
   ];
 
   const journeyPhotos = [
-    "/images/AMV_1222.JPG",
-    "/images/AMV_0951.JPG",
+    "/images/AMV_1753.jpg",
+    "/images/AMV_2709.JPG",
   ];
 
   const togetherPhotos = [
-    "/images/AMV_0061.JPG",
+    "/images/AMV_0272.JPG",
     "/images/AMV_0531.JPG",
   ];
 
@@ -86,8 +86,7 @@ export default function Home() {
       <Section className="bg-wedding-cream">
         <ImageGallery
           images={ourJourneyPhotos}
-          title="Hành Trình Tình Yêu"
-          description="Từ những ngày đầu gặp gỡ, chúng mình đã biết rằng đây là duyên số trời định. Mỗi khoảnh khắc bên nhau đều là món quà quý giá, từ nụ cười đầu tiên đến những ước mơ chung về tương lai."
+          title="Chúng Mình Gặp Gỡ"
           layout="showcase"
         />
       </Section>
@@ -96,8 +95,7 @@ export default function Home() {
       <Section className="bg-white">
         <ImageGallery
           images={couplePhotos}
-          title="Chân Dung Hạnh Phúc"
-          description="Trong ánh mắt nhau, chúng mình tìm thấy tình yêu vô điều kiện. Mỗi nụ cười, mỗi cử chỉ nhỏ đều thể hiện sự trân trọng và yêu thương mà chúng mình dành cho nhau."
+          title="Trò Chuyện"
           layout="showcase"
         />
       </Section>
@@ -106,8 +104,7 @@ export default function Home() {
       <Section className="bg-wedding-cream">
         <ImageGallery
           images={loveStoryPhotos}
-          title="Khoảnh Khắc Ngọt Ngào"
-          description="Tình yêu không chỉ là lời hứa, mà còn là những khoảnh khắc bình dị nhưng đong đầy ý nghĩa. Từng giây phút bên nhau đều là kỷ niệm đáng nhớ trong câu chuyện tình của chúng mình."
+          title="Rồi Sa Vào Lòng Nhau"
           layout="grid"
         />
       </Section>
@@ -117,7 +114,6 @@ export default function Home() {
         <ImageGallery
           images={journeyPhotos}
           title="Cùng Nhau Bước Đi"
-          description="Chúng mình đã cùng nhau trải qua biết bao điều. Mỗi bước chân đều là minh chứng cho tình yêu bền chặt, sẵn sàng đối mặt với mọi thử thách để đến với ngày hôm nay."
           layout="grid"
         />
       </Section>
@@ -126,8 +122,7 @@ export default function Home() {
       <Section className="bg-wedding-cream">
         <ImageGallery
           images={togetherPhotos}
-          title="Hạnh Phúc Viên Mãn"
-          description="Bên nhau, chúng mình tìm thấy sự bình yên và hạnh phúc trọn vẹn. Những khoảnh khắc giản đơn này chính là nền tảng cho tình yêu lớn lao mà chúng mình đang xây dựng."
+          title="Và Chuẩn Bị Bắt Đầu Một Hành Trình Mới"
           layout="grid"
         />
       </Section>

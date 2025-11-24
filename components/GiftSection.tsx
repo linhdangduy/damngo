@@ -44,11 +44,6 @@ export default function GiftSection({
             Sự Hiện Diện Của Quý Vị Là Món Quà Quý Giá Nhất
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto px-4">
-            Sự có mặt của quý vị trong ngày trọng đại là món quà lớn nhất đối với chúng mình. Tuy nhiên,
-            nếu quý vị muốn gửi tặng chúng mình một món quà, chúng mình đã chuẩn bị thông tin bên dưới.
-          </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <motion.button
               onClick={() => openModal(brideQR)}
