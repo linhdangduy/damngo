@@ -66,10 +66,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
-            Mỗi chi tiết trong thiệp cưới đều được chúng mình chọn lọc cẩn thận,
-            thể hiện tình yêu và sự trân trọng dành cho quý vị - những người đặc biệt trong cuộc đời chúng mình.
-          </p>
         </div>
       </Section>
 

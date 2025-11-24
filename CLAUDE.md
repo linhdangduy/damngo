@@ -23,7 +23,101 @@ This is landing page for our upcoming wedding, where we show bride and groom and
 - Please make sure the website bring good loading experience for users
 - Please follow the best practice for code organization within the project
 
-## Deployment [WIP]
-This is wip, we can think of this later
+## Image Optimization
 
-- I plan to cache the images and frontend code via CDN so it can loaded faster.
+**IMPORTANT: Always optimize images before deploying to maintain fast loading times!**
+
+### Why Optimize Images?
+- Original photos are typically 3-8MB each (way too large for web)
+- Optimized images are 120-300KB each (95% smaller!)
+- Faster page load = better user experience
+- Lower bandwidth costs
+
+### How to Optimize Images
+
+1. **Add new images** to the `public/images/` folder (any subdirectory is fine)
+
+2. **Run the optimization script**:
+   ```bash
+   npm run optimize-images
+   ```
+
+3. **Review the output** - it will show you:
+   - Original size vs optimized size
+   - Percentage saved
+   - Where optimized images are saved
+
+4. **Replace original images** (the script creates a backup):
+   ```bash
+   # Backup originals (if not already backed up)
+   mv public/images public/images-backup-YYYY-MM-DD
+
+   # Use optimized images
+   mv public/images-optimized public/images
+   ```
+
+5. **Rebuild for production**:
+   ```bash
+   npm run build
+   ```
+
+### Optimization Settings
+
+The optimization script ([scripts/optimize-images.js](scripts/optimize-images.js)) does:
+- Resizes images to max 2000px on longest side (perfect for all screens)
+- Compresses JPG with 80% quality (visually lossless)
+- Compresses PNG with level 9 compression
+- Enables progressive JPEG loading (faster perceived load)
+
+### Image Guidelines
+
+- **Wedding photos**: Place in `public/images/`
+- **Wedding invitations**: Place in `public/images/wedding-invitation/`
+- **QR codes**: Place in `public/images/` (e.g., bride-qr.png, groom-qr.png)
+- **Format**: JPG for photos, PNG for graphics/QR codes
+- **Always run optimization** before deploying!
+
+### File Organization
+
+```
+public/
+  images/              # Optimized images (used by website)
+    wedding-invitation/
+      outlook-of-wedding-invitation.png
+      inside-of-wedding-invitation.png
+    AMV_1222.JPG       # Wedding photos
+    bride-qr.png
+    groom-qr.png
+
+images-original/       # Backup of original high-res images (gitignored)
+archive/              # Old/unused images (gitignored)
+```
+
+## Deployment
+
+### GitHub Pages Setup
+
+The website is configured for deployment to GitHub Pages at `https://linhdangduy.github.io/damngo/`
+
+**Environment Configuration:**
+- `.env.development` - Empty basePath for local development (access at http://localhost:3000)
+- `.env.production` - Sets `NEXT_PUBLIC_BASE_PATH=/damngo` for GitHub Pages
+
+**Build for production:**
+```bash
+npm run build
+```
+
+This creates the `out/` directory with:
+- All HTML, CSS, JS files
+- Optimized images
+- Correct `/damngo` paths for GitHub Pages
+- `.nojekyll` file (auto-added during build)
+
+**Deploy the `out/` directory** to your GitHub Pages branch.
+
+### Performance Tips
+- Images are automatically optimized (see Image Optimization section above)
+- Progressive JPEGs load faster
+- Total deployment size: ~3.5MB (very fast!)
+- CDN caching is handled by GitHub Pages automatically

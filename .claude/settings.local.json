@@ -19,7 +19,8 @@
       "Bash(curl -I http://localhost:3000/damngo)",
       "Bash(curl -s http://localhost:3000)",
       "Bash(npm install --save-dev sharp)",
-      "Bash(npm run optimize-images)"
+      "Bash(npm run optimize-images)",
+      "Bash(pkill -f \"npm run dev\")"
     ],
     "deny": [],
     "ask": []
