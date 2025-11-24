@@ -5,30 +5,32 @@ import VenueSection from "@/components/VenueSection";
 import GiftSection from "@/components/GiftSection";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   // Curated photo collection - Love story journey
   const ourJourneyPhotos = [
-    "/images/QLN_4794.JPG",
-    "/images/AMV_0061.JPG",
+    `${basePath}/images/QLN_4794.JPG`,
+    `${basePath}/images/AMV_0061.JPG`,
   ];
 
   const couplePhotos = [
-    "/images/AMV_2640.JPG",
-    "/images/AMV_1222.JPG",
+    `${basePath}/images/AMV_2640.JPG`,
+    `${basePath}/images/AMV_1222.JPG`,
   ];
 
   const loveStoryPhotos = [
-    "/images/AMV_2064.jpg",
-    "/images/AMV_1790.JPG",
+    `${basePath}/images/AMV_2064.jpg`,
+    `${basePath}/images/AMV_1790.JPG`,
   ];
 
   const journeyPhotos = [
-    "/images/AMV_1753.jpg",
-    "/images/AMV_2709.JPG",
+    `${basePath}/images/AMV_1753.jpg`,
+    `${basePath}/images/AMV_2709.JPG`,
   ];
 
   const togetherPhotos = [
-    "/images/AMV_0272.JPG",
-    "/images/AMV_0531.JPG",
+    `${basePath}/images/AMV_0272.JPG`,
+    `${basePath}/images/AMV_0531.JPG`,
   ];
 
   return (
@@ -47,7 +49,7 @@ export default function Home() {
               <h3 className="text-xl sm:text-2xl text-white mb-4 elegant-text">Mặt Ngoài</h3>
               <div className="relative w-full aspect-square">
                 <img
-                  src="/images/wedding-invitation/outlook-of-wedding-invitation.png"
+                  src={`${basePath}/images/wedding-invitation/outlook-of-wedding-invitation.png`}
                   alt="Wedding Invitation Outlook"
                   className="w-full h-full object-contain rounded-lg shadow-2xl"
                 />
@@ -57,7 +59,7 @@ export default function Home() {
               <h3 className="text-xl sm:text-2xl text-white mb-4 elegant-text">Mặt Trong</h3>
               <div className="relative w-full aspect-square">
                 <img
-                  src="/images/wedding-invitation/inside-of-wedding-invitation.png"
+                  src={`${basePath}/images/wedding-invitation/inside-of-wedding-invitation.png`}
                   alt="Wedding Invitation Inside"
                   className="w-full h-full object-contain rounded-lg shadow-2xl"
                 />
@@ -130,8 +132,8 @@ export default function Home() {
       {/* Gift Section */}
       <Section className="bg-white">
         <GiftSection
-          brideQR={{ name: "Thục Hiền", imagePath: "/images/bride-qr.png" }}
-          groomQR={{ name: "Duy Linh", imagePath: "/images/groom-qr.png" }}
+          brideQR={{ name: "Thục Hiền", imagePath: `${basePath}/images/bride-qr.png` }}
+          groomQR={{ name: "Duy Linh", imagePath: `${basePath}/images/groom-qr.png` }}
         />
       </Section>
 

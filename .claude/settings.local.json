@@ -10,7 +10,14 @@
       "Bash(git rm --cached public/images/archive/*.JPG public/images/archive/*.jpg)",
       "Bash(git add .gitignore)",
       "Bash(git add -u .claude/archive/)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nRemove archive images from git tracking and update .gitignore\n\n- Add public/archive and .claude/archive to .gitignore\n- Remove previously tracked archive images from git (41 files)\n- Archive images remain on disk but won''t be pushed to remote\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+      "Bash(git commit -m \"$(cat <<''EOF''\nRemove archive images from git tracking and update .gitignore\n\n- Add public/archive and .claude/archive to .gitignore\n- Remove previously tracked archive images from git (41 files)\n- Archive images remain on disk but won''t be pushed to remote\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(curl -I http://localhost:3000)",
+      "Bash(curl -I http://localhost:3000/damngo/)",
+      "Bash(curl http://localhost:3000)",
+      "Bash(curl -I http://localhost:3000/images/AMV_1222.JPG)",
+      "Bash(NODE_ENV=production npm run build)",
+      "Bash(curl -I http://localhost:3000/damngo)",
+      "Bash(curl -s http://localhost:3000)"
     ],
     "deny": [],
     "ask": []

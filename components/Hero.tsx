@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/AMV_1915.JPG"
+          src={`${basePath}/images/AMV_1222.JPG`}
           alt="Wedding couple"
           fill
           priority
