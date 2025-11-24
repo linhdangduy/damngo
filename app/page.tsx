@@ -124,7 +124,7 @@ export default function Home() {
       <Section className="bg-wedding-cream">
         <ImageGallery
           images={togetherPhotos}
-          title="Và Chuẩn Bị Bắt Đầu Một Hành Trình Mới"
+          title="Và Bắt Đầu Một Hành Trình Mới"
           layout="grid"
         />
       </Section>
@@ -140,10 +140,9 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-wedding-accent text-white py-8 sm:py-12 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <h3 className="text-2xl sm:text-3xl elegant-text mb-4">Cảm Ơn Quý Vị</h3>
+          <h3 className="text-2xl sm:text-3xl elegant-text mb-4">Cảm Ơn Mọi Người</h3>
           <p className="text-base sm:text-lg mb-6 leading-relaxed">
-            Chúng mình vô cùng biết ơn tình yêu thương và sự hỗ trợ của quý vị khi chúng mình bước
-            vào chương mới của cuộc đời.
+            Chúng mình vô cùng biết ơn tình yêu thương và sự hỗ trợ của mọi người.
           </p>
           <p className="text-sm opacity-75">
             Trân trọng và biết ơn,

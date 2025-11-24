@@ -17,7 +17,9 @@
       "Bash(curl -I http://localhost:3000/images/AMV_1222.JPG)",
       "Bash(NODE_ENV=production npm run build)",
       "Bash(curl -I http://localhost:3000/damngo)",
-      "Bash(curl -s http://localhost:3000)"
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(npm install --save-dev sharp)",
+      "Bash(npm run optimize-images)"
     ],
     "deny": [],
     "ask": []
